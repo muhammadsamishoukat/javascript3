@@ -249,7 +249,7 @@ else{
 
 
 function Occchr() {
-    var b=prompt("enter any number/alphabet").toLowerCase
+    var b=prompt("enter any number/alphabet")
     var cs=prompt("enter character you wants to check")
     for(i=0;i<=b.length;i++){
         if (b=cs) {
@@ -285,13 +285,76 @@ function countOccure(params) {
 
 function highestfrequency(params) {
     var count=0
+    var match;
     var str=prompt("enter string")
-    var a=prompt("enter chracter to search highest frequency")
+    match=(prompt("enter chracter to search highest frequency"))
+    for(i=0;i<=str.length-1;i++){
+      
+        if(str[i]==match){
+       count++;
+   }
+    }
+    console.log(count);
+   }
+  
+
     
    
-}
+
 
 //*lowest frequency
 
+function lowestfrequency(params) {
+    var count=0
+var match;
+var str=prompt("enter string")
+match=(prompt("enter chracter to search lowest frequency"))
+for(i=0;i<=str.length-1;i++){
+  
+    if(str[i]==match){
+   count++;
+}
+}
+console.log(count);
+}
+
+//*remove first occurance
 
 
+function firstoccurance(params) {
+    var input=prompt("enter string").split("")
+    var input2=input.shift()
+    console.log(input);
+}
+
+//*remove last occurance
+
+function lastoccurance(params) {
+    var input=prompt("enter string").split("")
+    var input2=input.pop()
+    console.log(input);
+
+}
+
+
+//*remove all occurance
+
+function alloccurance(params) {
+    var str=prompt("enter string")
+    var str2=str.replaceAll(/str/g," ")
+    console.log(str2);
+}
+
+
+
+
+//*remove all repeated characters
+
+function repeatedcharacter(params) {
+    var str=prompt("enter string")
+    var str2=prompt("enter repeated characters you want to remove")
+   for(i=0;i<=str.length;i++){
+    var str3=str[i].replace(str2,"").split()
+    console.log(str3);
+   }
+}
